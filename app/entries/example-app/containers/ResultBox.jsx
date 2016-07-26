@@ -7,7 +7,7 @@ import cssModules from 'react-css-modules';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {
   pureRender,
-} from 'internals/lib/boilerplate';
+} from 'webcube/boilerplate';
 import throttle from 'lodash/throttle';
 import WelcomeBox from '../../../components/WelcomeBox';
 import LabelButton from '../../../components/LabelButton';

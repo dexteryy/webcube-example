@@ -1,6 +1,7 @@
 {
   "presets": [
-    "react"
+    "react",
+    "es2016",
   ],
   "plugins": [
     // ["transform-runtime", {
@@ -15,8 +16,8 @@
     // "transform-es2015-unicode-regex",
     "transform-es2015-modules-commonjs",
     "transform-class-properties",
-    "transform-async-to-generator",
-    "syntax-async-functions",
     "transform-decorators-legacy",
+    "syntax-async-functions",
+    "async-to-promises",
   ]
 }

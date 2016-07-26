@@ -1,7 +1,7 @@
 /* @flow */
 
-import AppSkeleton from 'internals/lib/boilerplate/AppSkeleton';
-import createReduxRouterRoot from 'internals/lib/boilerplate/createReduxRouterRoot';
+import AppSkeleton from 'webcube/boilerplate/AppSkeleton';
+import createReduxRouterRoot from 'webcube/boilerplate/createReduxRouterRoot';
 import routes from './routes';
 import reducers from './reducers/';
 

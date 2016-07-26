@@ -6,7 +6,7 @@ import {
   rootPath,
   staticRoot,
   cloudAdapter,
-} from '../internals/utils';
+} from 'webcube/utils';
 
 gulp.task('deploy:custom', [
   'build:html',

@@ -8,7 +8,7 @@ import {
   connect,
   stateSelector,
   actionDispatcher,
-} from 'internals/lib/boilerplate';
+} from 'webcube/boilerplate';
 import Helmet from 'react-helmet';
 import EffectBox from './EffectBox';
 import ResultBox from './ResultBox';

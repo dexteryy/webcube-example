@@ -1,13 +1,12 @@
 [ignore]
 .*/build/.*
 .*/node_modules/.*
-.*/internals/.*
 .*\.spec\.js
 
 [include]
 
 [libs]
-internals/declarations/
+node_modules/webcube/declarations/
 app/declarations/
 
 [options]

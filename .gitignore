@@ -13,4 +13,3 @@ app/components/Demo*
 staticweb/demo*
 demo*.spec.js
 Demo*.spec.js
-internals/configs/webpack.nodejs.*

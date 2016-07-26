@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import cssModules from 'react-css-modules';
 import {
   pureRender,
-} from 'internals/lib/boilerplate';
+} from 'webcube/boilerplate';
 import Helmet from 'react-helmet';
 import MessageBoxWithStyle from '../../../components/MessageBoxWithStyle';
 import * as constants from '../constants';

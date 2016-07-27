@@ -19,7 +19,7 @@
       - **constants/**
       - **routes/** - [React Router](https://github.com/reactjs/react-router/)
       - **styles/** - CSS/SCSS/CSSInJS shared between container components
-      - **tests/** - See [Testing](https://github.com/dexteryy/webcube#how-to-test) section
+      - **tests/** - See [Testing](https://github.com/dexteryy/webcube#how-to-test-the-web-app) section
       - `index.js`
     - _**page2/**_ - See ['entry' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
     - _**demo-page2/**_ - See [.gitignore][gitignore] and ['demo' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
@@ -89,7 +89,7 @@ export CHROMEDRIVER_CDNURL="http://npm.taobao.org/mirrors/chromedriver"
 
 #### Step 3
 
-Follow [webcube's document](https://github.com/dexteryy/webcube#how-to-build) to install / build / test / deploy / ...
+Follow [webcube's document](https://github.com/dexteryy/webcube#how-to-build-the-web-app) to install / build / test / deploy / ...
 
 ## Other Conventions
 

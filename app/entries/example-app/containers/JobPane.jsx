@@ -26,7 +26,7 @@ export default class JobPane extends Component {
     return (
       <div styleName="pane">
         <Helmet
-          title={`Jobs - ${constants.APP_TITLE}`}
+          title={`Jobs - ${constants.TITLE}`}
           meta={[
             { name: 'description', content: 'demo' },
           ]} />

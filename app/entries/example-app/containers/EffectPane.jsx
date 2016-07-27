@@ -32,7 +32,7 @@ export default class EffectPane extends Component {
     return (
       <div styleName="pane">
         <Helmet
-          title={`Effects - ${constants.APP_TITLE}`}
+          title={`Effects - ${constants.TITLE}`}
           meta={[
             { name: 'description', content: 'demo' },
           ]} />

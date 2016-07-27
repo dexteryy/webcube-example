@@ -14,10 +14,10 @@ gulp.task('deploy:custom', [
   `build/public/${staticRoot}/**`,
 ], {
   cwd: rootPath,
-  accessKeyId: process.env.APP_DEPLOY_CUSTOM_OSS_ID,
-  secretAccessKey: process.env.APP_DEPLOY_CUSTOM_OSS_SECRET,
-  bucket: process.env.APP_DEPLOY_CUSTOM_OSS_BUCKET,
-  root: process.env.APP_CUSTOM_ROOT,
-  CacheControl: `max-age=${process.env.APP_CUSTOM_MAXAGE}, public`,
+  accessKeyId: process.env.WEBCUBE_DEPLOY_CUSTOM_OSS_ID,
+  secretAccessKey: process.env.WEBCUBE_DEPLOY_CUSTOM_OSS_SECRET,
+  bucket: process.env.WEBCUBE_DEPLOY_CUSTOM_OSS_BUCKET,
+  root: process.env.WEBCUBE_CUSTOM_ROOT,
+  CacheControl: `max-age=${process.env.WEBCUBE_CUSTOM_MAXAGE}, public`,
 }));
 */

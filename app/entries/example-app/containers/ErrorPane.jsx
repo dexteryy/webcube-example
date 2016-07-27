@@ -17,7 +17,7 @@ export default class ErrorPane extends Component {
     return (
       <div styleName="pane">
         <Helmet
-          title={`Error Page - ${constants.APP_TITLE}`}
+          title={`Error Page - ${constants.TITLE}`}
           meta={[
             { name: 'description', content: 'demo' },
           ]} />

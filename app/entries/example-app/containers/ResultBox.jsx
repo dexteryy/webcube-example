@@ -84,7 +84,8 @@ export default class ResultBox extends Component {
               );
             } else {
               button = (
-                <button styleName="btn-pure"
+                <button
+                  styleName="btn-pure"
                   onClick={() => this.triggerEffect(trigger.effect)} >
                   {trigger.style} + {trigger.effect}
                 </button>
@@ -99,7 +100,8 @@ export default class ResultBox extends Component {
                   {button}
                 </div>
                 <div styleName="card-extra">
-                  <div styleName="card-remove"
+                  <div
+                    styleName="card-remove"
                     onClick={() => removeTrigger(trigger.id)}>
                     <i styleName="card-remove-icon"></i>
                     Remove

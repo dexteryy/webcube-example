@@ -12,7 +12,9 @@ function LabelButton({
   onClick,
 }) {
   return (
-    <div styleName="button" className={className}
+    <div
+      styleName="button"
+      className={className}
       onClick={onClick}>
       <div styleName="main" className={mainClassName}>
         <i styleName="icon"></i>

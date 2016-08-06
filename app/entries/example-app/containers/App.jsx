@@ -3,6 +3,7 @@ import styles from './App.scss';
 import React, { Component } from 'react';
 import cssModules from 'react-css-modules';
 import {
+  pureRender,
   connect,
   actionDispatcher,
 } from 'webcube/boilerplate';
@@ -14,6 +15,7 @@ import { Link } from 'react-router';
 @connect()
 @actionDispatcher({ push }, 'actions')
 @cssModules(styles)
+@pureRender()
 export default class App extends Component {
 
   render() {

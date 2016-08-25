@@ -1,4 +1,3 @@
-/* @flow */
 /* eslint no-useless-constructor: 0 */
 
 import styles from './ResultBox.scss';
@@ -18,26 +17,9 @@ export const animations = [
 ];
 export const buttonStyles = ['pure', 'sementic'];
 
-type effectTrigger = {
-  id: number,
-  effect: string,
-  style: string,
-};
-
-type ResultBoxProps = {
-  message: string,
-  bgColor?: string,
-  effectTriggers: Array<effectTrigger>,
-};
-
 @cssModules(styles)
 @pureRender()
 export default class ResultBox extends Component {
-
-  constructor(props: ResultBoxProps) {
-    super(props);
-    // Operations usually carried out in componentWillMount go here
-  }
 
   state: Object = {
     eyeCatching: '',
@@ -50,9 +32,16 @@ export default class ResultBox extends Component {
     }, 1000);
   }, 1010);
 
-  render(): React.Element {
-    const { message, bgColor, effectTriggers, removeTrigger } = this.props;
-    const { eyeCatching } = this.state;
+  render() {
+    const {
+      message,
+      bgColor,
+      effectTriggers,
+      removeTrigger,
+    } = this.props;
+    const {
+      eyeCatching,
+    } = this.state;
     const boxStyle = eyeCatching ? styles[`box-${eyeCatching}`] : '';
     const LabelButtonOpt = {
       className: styles['btn-semantic'],

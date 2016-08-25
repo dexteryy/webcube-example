@@ -63,10 +63,13 @@ export default class EffectBox extends Component {
 
   render() {
     const {
-      readme, submitText,
+      readme,
+      submitText,
     } = this.props;
     const {
-      selectedEffect, selectedStyle, feedback,
+      selectedEffect,
+      selectedStyle,
+      feedback,
     } = this.state;
     const selectors = [{
       id: 'effect',

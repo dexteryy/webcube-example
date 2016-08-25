@@ -1,16 +1,27 @@
 
-import React from 'react';
-import { Route, IndexRedirect } from 'react-router';
 import App from '../containers/App';
 import EffectPane from '../containers/EffectPane';
 import JobPane from '../containers/JobPane';
 import ErrorPane from '../containers/ErrorPane';
 
-export default (
-  <Route path="/" component={App}>
-    <IndexRedirect to="pane/effects" />
-    <Route path="pane/effects" component={EffectPane} />
-    <Route path="pane/jobs" component={JobPane} />
-    <Route path="pane/*" component={ErrorPane} />
-  </Route>
-);
+// use plain routes if you need `rootProps`, see `../index.js`
+// https://github.com/reactjs/react-router/blob/master/docs/guides/RouteConfiguration.md#configuration-with-plain-routes
+const routes = {
+  path: '/',
+  component: App,
+  indexRoute: {
+    onEnter: (opt, replace) => replace('/pane/effects'),
+  },
+  childRoutes: [{
+    path: 'pane/effects',
+    component: EffectPane,
+  }, {
+    path: 'pane/jobs',
+    component: JobPane,
+  }, {
+    path: 'pane/*',
+    component: ErrorPane,
+  }],
+};
+
+export default routes;

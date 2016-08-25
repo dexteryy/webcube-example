@@ -27,7 +27,8 @@ export default class EffectPane extends Component {
 
   render() {
     const {
-      actions, triggers,
+      actions,
+      triggers,
     } = this.props;
     return (
       <div styleName="pane">

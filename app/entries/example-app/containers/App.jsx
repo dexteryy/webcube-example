@@ -20,8 +20,10 @@ export default class App extends Component {
 
   render() {
     const {
+      appStateSample,
       children,
-      // location, actions,
+      // location,
+      // actions,
     } = this.props;
     const menu = [{
       path: '/pane/effects',
@@ -44,7 +46,10 @@ export default class App extends Component {
         title2="This is a demo"
         MenuLink={Link}
         menu={menu}>
-        {children}
+        {/* https://github.com/reactjs/react-router/issues/1857 */}
+        {React.cloneElement(children, {
+          appStateSample,
+        })}
       </TabView>
     );
   }

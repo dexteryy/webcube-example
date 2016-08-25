@@ -7,6 +7,7 @@ import App from 'app/entries/example-app';
 
 const app = new App({
   isStaticWeb: true,
+  appStateSample: 'sample',
   // DevTools,
 });
 

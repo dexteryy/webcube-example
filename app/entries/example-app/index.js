@@ -8,7 +8,6 @@ import reducers from './reducers/';
 type AppOpt = {
   isStaticWeb?: boolean,
   appStateSample: String,
-  enablePerf?: boolean,
   DevTools?: Object,
 }
 

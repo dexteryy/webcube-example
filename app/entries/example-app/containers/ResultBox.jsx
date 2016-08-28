@@ -21,11 +21,11 @@ export const buttonStyles = ['pure', 'sementic'];
 @pureRender()
 export default class ResultBox extends Component {
 
-  state: Object = {
+  state = {
     eyeCatching: '',
   };
 
-  triggerEffect: Function = throttle((effect) => {
+  triggerEffect = throttle((effect) => {
     this.setState({ eyeCatching: effect });
     setTimeout(() => {
       this.setState({ eyeCatching: '' });
@@ -63,35 +63,29 @@ export default class ResultBox extends Component {
           transitionEnterTimeout={400}
           transitionLeaveTimeout={400}>
           {effectTriggers.map((trigger, i) => {
-            let button;
-            if (trigger.style === 'sementic') {
-              button = (
-                <LabelButton
-                  {...LabelButtonOpt}
-                  label={trigger.effect}
-                  onClick={() => this.triggerEffect(trigger.effect)} />
-              );
-            } else {
-              button = (
-                <button
-                  styleName="btn-pure"
-                  onClick={() => this.triggerEffect(trigger.effect)} >
-                  {trigger.style} + {trigger.effect}
-                </button>
-              );
-            }
             return (
               <div styleName="card" key={trigger.id}>
                 <div styleName="card-content">
                   <div styleName="card-header">Button {trigger.id}</div>
                 </div>
                 <div styleName="card-content">
-                  {button}
+                  {trigger.style === 'sementic' ? (
+                    <LabelButton
+                      {...LabelButtonOpt}
+                      label={trigger.effect}
+                      onTouchTap={() => this.triggerEffect(trigger.effect)} />
+                  ) : (
+                    <button
+                      styleName="btn-pure"
+                      onTouchTap={() => this.triggerEffect(trigger.effect)} >
+                      {trigger.style} + {trigger.effect}
+                    </button>
+                  )}
                 </div>
                 <div styleName="card-extra">
                   <div
                     styleName="card-remove"
-                    onClick={() => removeTrigger(trigger.id)}>
+                    onTouchTap={() => removeTrigger(trigger.id)}>
                     <i styleName="card-remove-icon"></i>
                     Remove
                   </div>

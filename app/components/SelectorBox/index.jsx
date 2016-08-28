@@ -31,7 +31,7 @@ function SelectorBox({
     submitBlock = (
       <div
         styleName="submit"
-        onClick={
+        onTouchTap={
           () => {
             const res = {};
             selectors.forEach((selector) => {

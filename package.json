@@ -45,7 +45,7 @@
     "normalize.css": "^4.2.0",
     "purecss": "^0.6.0",
     "semantic-ui-css": "^2.2.2",
-    "webcube": "^0.4.4"
+    "webcube": "^0.4.7"
   },
   "devDependencies": {},
   "keywords": [

@@ -41,7 +41,7 @@ function TabView({
             title={item.title}
             className={styles['item']}
             activeClassName={styles['item-active']}
-            onTouchTap={handleMenuClick}>
+            onClick={handleMenuClick}>
             <i className={item.icon}></i>
             {item.text}
           </MenuLink>

@@ -9,13 +9,13 @@ function LabelButton({
   labelClassName = '',
   label,
   text,
-  onTouchTap,
+  onClick,
 }) {
   return (
     <div
       styleName="button"
       className={className}
-      onTouchTap={onTouchTap}>
+      onClick={onClick}>
       <div styleName="main" className={mainClassName}>
         <i styleName="icon"></i>
         <span>{text}</span>

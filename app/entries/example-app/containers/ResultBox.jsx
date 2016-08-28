@@ -73,11 +73,11 @@ export default class ResultBox extends Component {
                     <LabelButton
                       {...LabelButtonOpt}
                       label={trigger.effect}
-                      onTouchTap={() => this.triggerEffect(trigger.effect)} />
+                      onClick={() => this.triggerEffect(trigger.effect)} />
                   ) : (
                     <button
                       styleName="btn-pure"
-                      onTouchTap={() => this.triggerEffect(trigger.effect)} >
+                      onClick={() => this.triggerEffect(trigger.effect)} >
                       {trigger.style} + {trigger.effect}
                     </button>
                   )}
@@ -85,7 +85,7 @@ export default class ResultBox extends Component {
                 <div styleName="card-extra">
                   <div
                     styleName="card-remove"
-                    onTouchTap={() => removeTrigger(trigger.id)}>
+                    onClick={() => removeTrigger(trigger.id)}>
                     <i styleName="card-remove-icon"></i>
                     Remove
                   </div>

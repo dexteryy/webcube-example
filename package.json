@@ -16,7 +16,7 @@
     "test": "gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:all",
     "test:quick": "gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
     "test:unit": "gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:unit",
-    "test:cloud": "NODE_ENV=cloud gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
+    "test:cloud": "DEPLOY_MODE=staticweb NODE_ENV=production gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
     "build": "npm run start:staticserver && gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js build",
     "build:quick": "npm run start:staticserver && gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js build:html",
     "new": "plop --plopfile=node_modules/webcube/configs/plopfile.babel.js",
@@ -24,8 +24,10 @@
     "dev:dashboard": "npm run stop:staticserver && webpack-dashboard -- node node_modules/webcube/configs/devServer.js",
     "start:staticserver": "nohup gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js start:staticserver > ./webserver.log 2>&1 &",
     "stop:staticserver": "gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js stop:staticserver",
-    "deploy:staticweb": "NODE_ENV=cloud gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
-    "redeploy:staticweb": "NODE_ENV=cloud gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js redeploy:staticweb"
+    "deploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
+    "deploy:staticweb:html": "DEPLOY_MODE=staticweb NODE_ENV=production gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:html",
+    "deploy:staticweb:assets": "DEPLOY_MODE=staticweb NODE_ENV=production gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:static",
+    "redeploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production gulp --gulpfile node_modules/webcube/configs/gulpfile.babel.js redeploy:staticweb"
   },
   "config": {
     "ghooks": {
@@ -45,7 +47,7 @@
     "normalize.css": "^4.2.0",
     "purecss": "^0.6.0",
     "semantic-ui-css": "^2.2.2",
-    "webcube": "^0.5.4"
+    "webcube": "^0.5.6"
   },
   "devDependencies": {},
   "keywords": [

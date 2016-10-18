@@ -5,7 +5,7 @@ import MessageBox from '../MessageBox';
 
 function MessageBoxWithStyle({
   message,
-  ...props,
+  ...props
 }) {
   const styleProps = Object.assign({
     titleStyle: styles['msg-header'],

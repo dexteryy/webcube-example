@@ -22,10 +22,10 @@ export default createDevTools(
     changePositionKey="ctrl-q"
     changeMonitorKey="ctrl-m">
     {/* <MultipleMonitors>*/}
-      {/* <DiffMonitor theme="tomorrow" />*/}
-      {/* <Dispatcher />*/}
-      {/* <LogMonitor />*/}
-      {/* <FilterableLogMonitor />*/}
+    {/*   <DiffMonitor theme="tomorrow" />*/}
+    {/*   <Dispatcher />*/}
+    {/*   <LogMonitor />*/}
+    {/*   <FilterableLogMonitor />*/}
     {/* </MultipleMonitors>*/}
     <Inspector />
   </DockMonitor>

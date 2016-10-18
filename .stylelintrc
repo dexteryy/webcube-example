@@ -28,7 +28,7 @@ rules:
 
   # Specify whether or not quotation marks should be used around font family names, and whether single or double.
   # http://stylelint.io/user-guide/rules/font-family-name-quotes/
-  font-family-name-quotes: "always-unless-keyword"
+  font-family-name-quotes: "always-where-recommended"
 
   # Font weight
 

@@ -19,9 +19,9 @@ describe('example-app', function () {
       nightmare.goto(url).evaluate(function () {
         return document.querySelectorAll('#exampleAppRoot').length;
       }).end().then(result => {
-        expect(result).to.equal(1);
+        expect(result).to.be.equal(1);
         done();
-      });
+      }).catch(done);
     });
 
   });

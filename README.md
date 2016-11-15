@@ -45,7 +45,7 @@
 - ...
 - `index.js` - For single entry point, imported by other projects
 - `package.json` - dependencies and npm scripts based on [webcube](https://github.com/dexteryy/webcube)
-- `yarn.lock` - [yarn](https://yarnpkg.com)'s lockfile
+<!-- - `yarn.lock` - [yarn](https://yarnpkg.com)'s lockfile -->
 - `env.config` - Project-defined configuration options for webcube and custom scripts. See [Getting Started](#getting-started)
 
 ## Getting Started
@@ -67,11 +67,13 @@ Install dependencies:
 npm install
 ```
 
-or
+> NOTE: Yarn is not recommended
+
+<!-- or
 
 ```bash
 yarn
-```
+``` -->
 
 For users living in China:
 

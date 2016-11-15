@@ -27,7 +27,9 @@
     "deploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
     "deploy:staticweb:html": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:html",
     "deploy:staticweb:assets": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:static",
-    "redeploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js redeploy:staticweb"
+    "deploy:staging:staticweb": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
+    "deploy:staging:staticweb:html": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:html",
+    "deploy:staging:staticweb:assets": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:static"
   },
   "config": {
     "ghooks": {
@@ -47,7 +49,7 @@
     "normalize.css": "^5.0.0",
     "purecss": "^0.6.0",
     "semantic-ui-css": "^2.2.2",
-    "webcube": "^0.5.9"
+    "webcube": "^0.5.13"
   },
   "devDependencies": {},
   "keywords": [

@@ -130,6 +130,7 @@ rules:
       extra-properties:
         - composes
         - touch-callout
+        - overflow-scrolling
   # enforce that selectors are not allowed to have qualifying elements
   no-qualifying-elements:
     - 2
@@ -177,6 +178,7 @@ rules:
         - overflow
         - overflow-x
         - overflow-y
+        - -webkit-overflow-scrolling
         - z-index
         - flex
         - flex-basis

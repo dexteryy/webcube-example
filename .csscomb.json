@@ -21,10 +21,12 @@
   "strip-spaces": true,
   "tab-size": true,
   "unitless-zero": true,
-  "sort-order-fallback": "",
+  "sort-order-fallback": "abc",
   "sort-order": [
-    "$include",
     "$variable",
+    "$include",
+    "$extend",
+    "...",
 
     "appearance",
     "display",
@@ -170,8 +172,6 @@
     "content",
     "quotes",
     "cursor",
-    "speak",
-
-    "..."
+    "speak"
   ]
 }

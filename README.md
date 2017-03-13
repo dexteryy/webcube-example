@@ -1,7 +1,9 @@
 
-# WebCube Example App
+# webcube-example
 
-> * [webcube](https://github.com/dexteryy/webcube): Out-of-the-box configuration and toolkits for Static/Universal Web App (ES6 + React + Redux + ...)
+Boilerplate code and a demo for web app projects based on webcube.
+
+> * [webcube](https://github.com/dexteryy/webcube): Webcube is a batch of continuously updated base code and configurations for modern static/isomorphic web app. It simplifies the integration with the latest cutting-edge JS technology and tools, automatically provides the modern software engineering environment, architecture, workflow and best practices. It also can lower the barrier of starting a new web app project.
 > * webcube-cli: TODO
 
 ## Structure
@@ -17,6 +19,7 @@
       - **reducers/** - [Redux Reducers](http://redux.js.org/docs/basics/Reducers.html)
       - **actions/** - [Flux Standard Action](https://www.npmjs.com/package/redux-actions)
       - **constants/**
+      <!-- @TODO react-router v4 -->
       - **routes/** - [React Router](https://github.com/reactjs/react-router/)
       - **styles/** - CSS/SCSS/CSSInJS shared between container components
       - **tests/** - See [Testing](https://github.com/dexteryy/webcube#how-to-test-the-web-app) section
@@ -89,7 +92,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 Use mirrors:
 
 ```bash
-export NVM_NODEJS_ORG_MIRROR="http://npm.taobao.org/mirrors/node"
+export NODEJS_ORG_MIRROR="http://npm.taobao.org/mirrors/node"
 export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 export PHANTOMJS_CDNURL="http://npm.taobao.org/mirrors/phantomjs"
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
@@ -111,7 +114,6 @@ More detail:
 * [`.eslintrc.yml`](https://github.com/dexteryy/webcube-example/blob/master/.eslintrc.yml)
 * [`.flowconfig`](https://github.com/dexteryy/webcube-example/blob/master/.flowconfig)
 * [`.stylelintrc`](https://github.com/dexteryy/webcube-example/blob/master/.stylelintrc)
-* [`.sass-lint.yml`](https://github.com/dexteryy/webcube-example/blob/master/.sass-lint.yml)
 * [`.csscomb.json`](https://github.com/dexteryy/webcube-example/blob/master/.csscomb.json)
 * [`.htmlhintrc`](https://github.com/dexteryy/webcube-example/blob/master/.htmlhintrc)
 
@@ -119,7 +121,7 @@ More detail:
 
 * [Atom](atom.io/) + following plugins:
   * [language-babel](https://atom.io/packages/language-babel)
-  * [linter](https://atom.io/packages/linter) + [linter-eslint](https://atom.io/packages/linter-eslint) + [linter-flow](https://atom.io/packages/linter-flow) + [linter-sass-lint](https://atom.io/packages/linter-sass-lint) + [linter-htmlhint](https://atom.io/packages/linter-htmlhint)
+  * [linter](https://atom.io/packages/linter) + [linter-eslint](https://atom.io/packages/linter-eslint) + [linter-flow](https://atom.io/packages/linter-flow) + [linter-htmlhint](https://atom.io/packages/linter-htmlhint)
   * [editorconfig](https://atom.io/packages/editorconfig)
   * [toggle-quotes](https://atom.io/packages/toggle-quotes) + [vim-surround](https://atom.io/packages/vim-surround)
   * [auto-detect-indentation](https://atom.io/packages/auto-detect-indentation) + [resize-indent](https://atom.io/packages/resize-indent)
@@ -133,8 +135,6 @@ Recommended Settings for Atom (config.cson):
   lintOnFly: false
 "linter-stylelint":
   disableWhenNoConfig: true
-"linter-sass-lint":
-  noConfigDisable: true
 "language-babel":
   transpileOnSave: false
 "atom-css-comb":

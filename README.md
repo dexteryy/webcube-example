@@ -48,7 +48,7 @@ Boilerplate code and a demo for web app projects based on webcube.
 - ...
 - `index.js` - For single entry point, imported by other projects
 - `package.json` - dependencies and npm scripts based on [webcube](https://github.com/dexteryy/webcube)
-<!-- - `yarn.lock` - [yarn](https://yarnpkg.com)'s lockfile -->
+- `yarn.lock` - [yarn](https://yarnpkg.com)'s lockfile
 - `env.config` - Project-defined configuration options for webcube and custom scripts. See [Getting Started](#getting-started)
 
 ## Getting Started
@@ -66,17 +66,16 @@ cp ./configs/env.sample.config env.config
 
 Install dependencies:
 
+<!-- > NOTE: Yarn is not recommended -->
+```bash
+yarn
+```
+
+or
+
 ```bash
 npm install
 ```
-
-> NOTE: Yarn is not recommended
-
-<!-- or
-
-```bash
-yarn
-``` -->
 
 For users living in China:
 
@@ -163,7 +162,7 @@ git cz
 [package.json]: https://github.com/dexteryy/webcube-example/blob/master/package.json
 [env.sample.config]: https://github.com/dexteryy/webcube/blob/master/src/configs/env.sample.config
 [custom.env.sample.config]: https://github.com/dexteryy/webcube-example/blob/master/configs/env.sample.config
-[webpack.config]: https://github.com/dexteryy/webcube/blob/master/src/configs/webpack.default.config.babel.js
+[webpack.config]: https://github.com/dexteryy/webcube/blob/master/src/configs/webpack.config.babel.js
 [custom.webpack.config]: https://github.com/dexteryy/webcube-example/blob/master/configs/webpack.config.babel.js
 [gulpfile]: https://github.com/dexteryy/webcube/blob/master/src/configs/gulpfile.babel.js
 [custom.gulpfile]: https://github.com/dexteryy/webcube-example/blob/master/configs/gulpfile.babel.js

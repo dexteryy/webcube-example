@@ -1,7 +1,7 @@
 
-import styles from './index.scss';
 import React from 'react';
 import cssModules from 'react-css-modules';
+import styles from './index.scss';
 
 function TabView({
   id,

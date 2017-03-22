@@ -11,30 +11,43 @@ Boilerplate code and a demo for web app projects based on webcube.
 - **configs/** - Project-defined configuration files and build scripts
   - `env.sample.config` - Project-defined template file for [env.config](custom.env.sample.config)
 - **app/** - All source code for web app (shared between client-side and server-side), including JS, CSS and assets
-  - **components/** - [Presentational components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz)
-  - **entries/** - Multiple entry points, see [details](#multiple-entry-points-optional)
-    - _**example-app/**_ - An entry point
-      - **containers/** - [Container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz)
-      - **decorators/** - [Higher-order Components](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750)
-      - **reducers/** - [Redux Reducers](http://redux.js.org/docs/basics/Reducers.html)
-      - **actions/** - [Flux Standard Action](https://www.npmjs.com/package/redux-actions)
-      - **constants/**
-      <!-- @TODO react-router v4 -->
-      - **routes/** - [React Router](https://github.com/reactjs/react-router/)
-      - **styles/** - CSS/SCSS/CSSInJS shared between container components
-      - **tests/** - See [Testing](https://github.com/dexteryy/webcube#how-to-test-the-web-app) section
-      - `index.js`
-    - _**page2/**_ - See ['entry' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
-    - _**demo-page2/**_ - See [.gitignore][gitignore] and ['demo' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
+  - **common/** - Reusable code shared between entry points
+    - **utils/**
+    - **styles/** - CSS/SCSS/CSSInJS shared between entry points
+    - **assets/** - Images, fonts, audio, ... shared between entry points
+    - **components/** - [Presentational components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) shared between entry points
+    - **containers/** - [Container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) shared between entry points
+      - `DevTools.jsx`
     - ...
-  - **utils/**
-  - **data/** - Shared data files
-  - **assets/** - Shared images, fonts, audio, etc.
-  - **styles/** - CSS/SCSS/CSSInJS shared between entry points
-  - **containers/** - Shared [container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz)
-    - `DevTools.jsx`
+  - _**example-app/**_ - An entry point. See [Multiple entry points](#multiple-entry-points-optional)
+    - **common/** - Reusable code shared between feature sets
+      - **components/** - [Presentational components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) shared between feature sets
+      - **decorators/** - [Higher-order Components](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750) shared between feature sets
+      - **constants/** - Constants shared between feature sets
+      - ...
+    - **main/** - The default/global feature set
+      - **containers/** - [Container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) only used by this feature set
+        - `App.jsx`
+        - `404.jsx`
+      - ...
+    - _**feature-1/**_ - A feature set
+      - **containers/** - [Container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) only used by this feature set
+      - **actions/** - [Flux Standard Action](https://www.npmjs.com/package/redux-actions) only used by this feature set
+      - **reducers/** - [Redux Reducers](http://redux.js.org/docs/basics/Reducers.html) only used by this feature set
+      - **components/** - [Presentational components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) only used by this feature set
+      - **constants/** - Constants only used by this feature set
+      - **styles/** - CSS/SCSS/CSSInJS shared between components
+      - **tests/** - See [Testing](https://github.com/dexteryy/webcube#how-to-test-the-web-app) section
+      - ...
+    - _**feature-2/**_ - A feature set
+      - ...
+    - ...
+    - `index.js`
+    <!-- @TODO react-router v4 -->
+    - `routes.jsx` - [React Router v3](https://github.com/reactjs/react-router/)
+  - _**page2/**_ - See ['entry' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
+  - _**demo-page2/**_ - See [.gitignore][gitignore] and ['demo' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
   - ...
-  - **middleware/** - [Redux middleware](http://redux.js.org/docs/advanced/Middleware.html) shared between entry points
 - **staticweb/** - For static web deployment or testing
   - _**example-app/**_ - For entry point
     - `index.html`, `deploy.js`, `deploy.scss`

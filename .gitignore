@@ -7,7 +7,7 @@ rev-version.json
 build/public/*
 !build/public/favicon.png
 coverage/
-app/entries/demo*
+app/demo*
 app/data/demo*
 app/components/Demo*
 staticweb/demo*

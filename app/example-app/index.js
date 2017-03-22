@@ -4,7 +4,8 @@ import createReduxRouterRoot from 'webcube/boilerplate/createReduxRouterRoot';
 // @TODO react-router v4
 // import AppRoot from './containers/App';
 import routes from './routes';
-import reducers from './reducers';
+import triggers from './effects/reducers';
+import jobs from './jobs/reducers';
 
 export default class App extends AppSkeleton {
 
@@ -13,6 +14,9 @@ export default class App extends AppSkeleton {
   // @TODO react-router v4
   // Root = AppRoot;
   routes = routes;
-  reducers = reducers;
+  reducers = {
+    triggers,
+    jobs,
+  };
 
 }

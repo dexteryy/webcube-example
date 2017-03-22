@@ -1,9 +1,8 @@
 
 import 'normalize.css/normalize.css';
 import './deploy.scss';
-import App from 'app/entries/example-app';
-// or import App from '../../';
-// import DevTools from 'app/containers/DevTools';
+import App from 'app/example-app';
+// import DevTools from 'app/common/containers/DevTools';
 
 const app = new App({
   isStaticWeb: true,

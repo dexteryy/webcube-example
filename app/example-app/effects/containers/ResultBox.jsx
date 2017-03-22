@@ -1,15 +1,12 @@
 /* eslint no-useless-constructor: 0 */
 
-import styles from './ResultBox.scss';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import cssModules from 'react-css-modules';
+import styles from './ResultBox.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import {
-  pureRender,
-} from 'webcube/boilerplate';
 import throttle from 'lodash/throttle';
-import WelcomeBox from '../../../components/WelcomeBox';
-import LabelButton from '../../../components/LabelButton';
+import WelcomeBox from 'app/example-app/effects/components/WelcomeBox';
+import LabelButton from '../components/LabelButton';
 
 export const animations = [
   'bounce', 'flash', 'pulse', 'rubberBand', 'headShake',
@@ -18,8 +15,7 @@ export const animations = [
 export const buttonStyles = ['pure', 'sementic'];
 
 @cssModules(styles)
-@pureRender()
-export default class ResultBox extends Component {
+export default class ResultBox extends PureComponent {
 
   state = {
     eyeCatching: '',

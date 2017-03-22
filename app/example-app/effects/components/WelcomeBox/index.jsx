@@ -1,9 +1,9 @@
 /* @flow */
 
-import styles from './index.scss';
 import React from 'react';
 import cssModules from 'react-css-modules';
 import classnames from 'classnames';
+import styles from './index.scss';
 
 type WelcomeBoxProps = {
   message: string,

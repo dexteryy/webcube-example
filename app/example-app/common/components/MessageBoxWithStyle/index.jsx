@@ -1,7 +1,7 @@
 
-import styles from './index.scss';
 import React from 'react';
 import MessageBox from '../MessageBox';
+import styles from './index.scss';
 
 function MessageBoxWithStyle({
   message,

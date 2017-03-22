@@ -1,10 +1,10 @@
 
-import styles from './index.scss';
 import React from 'react';
 import cssModules from 'react-css-modules';
+import styles from './index.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import MessageBoxWithStyle from '../MessageBoxWithStyle';
-import messageBoxStyles from '../MessageBoxWithStyle/index.scss';
+import MessageBoxWithStyle from 'app/example-app/common/components/MessageBoxWithStyle';
+import messageBoxStyles from 'app/example-app/common/components/MessageBoxWithStyle/index.scss';
 
 function SelectorBox({
   readme = 'Hi!',

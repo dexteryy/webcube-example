@@ -1,9 +1,8 @@
 
-import styles from './App.scss';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import cssModules from 'react-css-modules';
+import styles from './App.scss';
 import {
-  pureRender,
   connect,
   actionDispatcher,
 } from 'webcube/boilerplate';
@@ -19,8 +18,8 @@ import { push } from 'react-router-redux';
 // } from 'react-router';
 import { Link } from 'react-router';
 // @TODO react-router v4: end
-import TabView from '../../../components/TabView';
-import FlipboardLogo from '../../../components/FlipboardLogo';
+import TabView from '../components/TabView';
+import FlipboardLogo from 'app/common/components/FlipboardLogo';
 // @TODO react-router v4: start
 // import EffectPane from './EffectPane';
 // import JobPane from './JobPane';
@@ -30,8 +29,7 @@ import FlipboardLogo from '../../../components/FlipboardLogo';
 @connect()
 @actionDispatcher({ push }, 'actions')
 @cssModules(styles)
-@pureRender()
-export default class App extends Component {
+export default class App extends PureComponent {
 
   render() {
     const {

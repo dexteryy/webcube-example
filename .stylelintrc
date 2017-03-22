@@ -376,9 +376,13 @@ rules:
           type: 'at-rule',
           name: 'include',
         },
+        {
+          type: 'at-rule',
+          name: 'extend',
+        },
+        "at-variables",
         "dollar-variables",
         "custom-properties",
-        "at-variables",
         "declarations",
         "rules",
         "at-rules",
@@ -389,6 +393,7 @@ rules:
   # https://github.com/hudochenkov/stylelint-order/blob/master/rules/declaration-block-properties-specified-order/README.md
   order/declaration-block-properties-specified-order:
     - [
+        "composes",
         "appearance",
         "display",
         "position",

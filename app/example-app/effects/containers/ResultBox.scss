@@ -1,5 +1,5 @@
 
-@import '../styles/variables';
+@import '../../common/styles/variables';
 
 .box-bounce {
   composes: bounce from 'animate.css';

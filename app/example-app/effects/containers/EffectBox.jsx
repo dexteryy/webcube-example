@@ -1,16 +1,13 @@
 
-import React, { Component } from 'react';
-import {
-  pureRender,
-} from 'webcube/boilerplate';
+import React, { PureComponent } from 'react';
 import toLower from 'lodash/toLower';
-import SelectorBox from '../../../components/SelectorBox';
+import SelectorBox from '../components/SelectorBox';
 import {
-  animations, buttonStyles,
+  animations,
+  buttonStyles,
 } from './ResultBox';
 
-@pureRender()
-export default class EffectBox extends Component {
+export default class EffectBox extends PureComponent {
 
   state = {
     selectedEffect: '',

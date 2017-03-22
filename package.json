@@ -49,7 +49,7 @@
     "normalize.css": "^5.0.0",
     "purecss": "^0.6.0",
     "semantic-ui-css": "^2.2.2",
-    "webcube": "^0.7.0"
+    "webcube": "^0.8.0"
   },
   "devDependencies": {},
   "keywords": [

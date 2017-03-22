@@ -1,23 +1,27 @@
 
-import paneStyles from '../styles/pane.scss';
-import styles from './JobPane.scss';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import cssModules from 'react-css-modules';
+import paneStyles from 'app/example-app/common/styles/pane.scss';
+import styles from './JobPane.scss';
 import {
-  pureRender,
   connect,
-  // stateSelector,
-  actionDispatcher,
+  stateSelector,
+  // actionDispatcher,
 } from 'webcube/boilerplate';
 import Helmet from 'react-helmet';
-import * as actionCreators from '../actions';
-import * as constants from '../constants';
+// import * as myActions from '../actions';
+import {
+  TITLE,
+} from 'app/example-app/common/constants';
 
 @connect()
-@actionDispatcher(actionCreators, 'actions')
+@stateSelector(
+  () => ({}),
+)
+// @actionDispatcher({
+// }, 'actions')
 @cssModules(Object.assign(styles, paneStyles))
-@pureRender()
-export default class JobPane extends Component {
+export default class JobPane extends PureComponent {
 
   render() {
     // const {
@@ -26,7 +30,7 @@ export default class JobPane extends Component {
     return (
       <div styleName="pane">
         <Helmet
-          title={`Jobs - ${constants.TITLE}`}
+          title={`Jobs - ${TITLE}`}
           meta={[
             { name: 'description', content: 'demo' },
           ]} />

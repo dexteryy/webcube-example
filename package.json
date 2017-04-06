@@ -12,6 +12,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "precommit": "npm run lint",
     "lint": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js check:all",
     "test": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:all",
     "test:quick": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
@@ -22,6 +23,7 @@
     "new": "./node_modules/plop/plop.js --plopfile=node_modules/webcube/configs/plopfile.babel.js",
     "dev": "npm run stop:staticserver && node node_modules/webcube/tools/devServer.js",
     "dev:dashboard": "npm run stop:staticserver && ./node_modules/webpack-dashboard/bin/webpack-dashboard.js -- node node_modules/webcube/tools/devServer.js",
+    "upgrade": "rm -rf ./node_modules yarn.lock && yarn",
     "start:staticserver": "nohup ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js start:staticserver > ./webserver.log 2>&1 &",
     "stop:staticserver": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js stop:staticserver",
     "deploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
@@ -32,10 +34,6 @@
     "deploy:staging:staticweb:assets": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:static"
   },
   "config": {
-    "ghooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run build"
-    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
@@ -44,11 +42,11 @@
     "node": ">=7.7.2"
   },
   "dependencies": {
-    "animate.css": "^3.5.1",
+    "animate.css": "^3.5.2",
     "classnames": "^2.2.5",
-    "normalize.css": "^5.0.0",
-    "purecss": "^0.6.0",
-    "semantic-ui-css": "^2.2.2",
+    "normalize.css": "^6.0.0",
+    "purecss": "^0.6.2",
+    "semantic-ui-css": "^2.2.10",
     "webcube": "^0.8.0"
   },
   "devDependencies": {},

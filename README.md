@@ -1,9 +1,24 @@
 
 # webcube-example
 
+[![Build Status][travis-image]][travis-url]
+[![Dependencies Status][dep-image]][dep-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+
+[travis-image]: https://img.shields.io/travis/dexteryy/webcube-example/master.svg
+[travis-url]: https://travis-ci.org/dexteryy/webcube-example
+[dep-image]: https://david-dm.org/dexteryy/webcube-example.svg
+[dep-url]: https://david-dm.org/dexteryy/webcube-example
+[coveralls-image]: https://img.shields.io/coveralls/dexteryy/webcube-example/master.svg
+[coveralls-url]: https://coveralls.io/r/dexteryy/webcube-example?branch=master
+
+![iOS Safari](https://github.com/alrra/browser-logos/raw/master/src/safari-ios/safari-ios_48x48.png) | ![Android WebView](https://github.com/alrra/browser-logos/raw/master/src/android/android_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
+--- | --- | --- |
+iOS 7+ ✔ | Android 4+ ✔ | 11+ ✔ |
+
 Boilerplate code and a demo for web app projects based on webcube.
 
-> * [webcube](https://github.com/dexteryy/webcube): Webcube is a batch of continuously updated base code and configurations for modern static/isomorphic web app. It simplifies the integration with the latest cutting-edge JS technology and tools, automatically provides the modern software engineering environment, architecture, workflow and best practices. It also can lower the barrier of starting a new web app project.
+> * [webcube](https://github.com/dexteryy/webcube): webcube is a batch of continuously updated base code and configurations for modern static/isomorphic web app. It simplifies the integration with the latest cutting-edge JS technology and tools, automatically provides the modern software engineering environment, architecture, workflow and best practices. It also can lower the barrier of starting a new web app project.
 > * webcube-cli: TODO
 
 ## Structure

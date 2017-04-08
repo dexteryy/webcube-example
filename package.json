@@ -39,7 +39,7 @@
     }
   },
   "engines": {
-    "node": ">=7.7.2"
+    "node": ">=7.8"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
@@ -47,20 +47,28 @@
     "normalize.css": "^6.0.0",
     "purecss": "^0.6.2",
     "semantic-ui-css": "^2.2.10",
-    "webcube": "^0.8.0"
+    "webcube": "^0.8.1"
   },
   "devDependencies": {},
   "keywords": [
-    "boilerplate",
-    "starter",
-    "offline",
-    "offline-first",
-    "staticweb",
     "react",
-    "react",
-    "gulp",
     "webpack",
+    "redux",
     "babel",
-    "linter"
+    "gulpfile",
+    "boilerplate",
+    "starter-kit",
+    "generator",
+    "static-website",
+    "universal-app",
+    "es6",
+    "es2015",
+    "css-modules",
+    "eslint",
+    "isomorphic",
+    "zero-configuration",
+    "react-router",
+    "offline-first",
+    "server-side-rendering"
   ]
 }

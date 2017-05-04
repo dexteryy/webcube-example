@@ -370,7 +370,7 @@ rules:
   # Rule
 
   # https://github.com/hudochenkov/stylelint-order/blob/master/rules/declaration-block-order/README.md
-  order/declaration-block-order:
+  order/order:
     - [
         {
           type: 'at-rule',
@@ -391,7 +391,7 @@ rules:
       unspecified: "ignore"
 
   # https://github.com/hudochenkov/stylelint-order/blob/master/rules/declaration-block-properties-specified-order/README.md
-  order/declaration-block-properties-specified-order:
+  order/properties-order:
     - [
         "composes",
         "appearance",

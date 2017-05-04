@@ -64,7 +64,7 @@ Boilerplate code and a demo for web app projects based on webcube.
   - _**demo-page2/**_ - See [.gitignore][gitignore] and ['demo' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
   - ...
 - **staticweb/** - For static web deployment or testing
-  - _**example-app/**_ - For entry point
+  - _**example-app/**_
     - `index.html`, `deploy.js`, `deploy.scss`
   - _**page2/**_ - See ['entry' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)
   - _**demo-page2/**_ - See [.gitignore][gitignore] and ['demo' generator](https://github.com/dexteryy/webcube#how-to-generate-new-code)

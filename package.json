@@ -20,7 +20,7 @@
     "test:cloud": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
     "build": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build",
     "build:quick": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build:html",
-    "new": "./node_modules/plop/plop.js --plopfile=node_modules/webcube/configs/plopfile.babel.js",
+    "new": "./node_modules/plop/src/plop.js --plopfile=node_modules/webcube/configs/plopfile.babel.js",
     "dev": "npm run stop:staticserver && node node_modules/webcube/tools/devServer.js",
     "dev:dashboard": "npm run stop:staticserver && ./node_modules/webpack-dashboard/bin/webpack-dashboard.js -- node node_modules/webcube/tools/devServer.js",
     "update": "rm -rf ./node_modules && yarn",

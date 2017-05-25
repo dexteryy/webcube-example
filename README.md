@@ -32,7 +32,6 @@ Boilerplate code and a demo for web app projects based on webcube.
     - **assets/** - Images, fonts, audio, ... shared between entry points
     - **components/** - [Presentational components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) shared between entry points
     - **containers/** - [Container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3o294zvoz) shared between entry points
-      - `DevTools.jsx`
     - ...
   - _**example-app/**_ - An entry point. See [Multiple entry points](#multiple-entry-points-optional)
     - **common/** - Reusable code shared between feature sets

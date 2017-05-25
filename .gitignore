@@ -6,6 +6,7 @@ env.config
 rev-version.json
 build/public/*
 !build/public/favicon.png
+!build/public/404.html
 coverage/
 app/demo*
 app/data/demo*

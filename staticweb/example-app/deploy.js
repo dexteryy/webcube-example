@@ -2,12 +2,9 @@
 import 'normalize.css/normalize.css';
 import './deploy.scss';
 import App from 'app/example-app';
-// import DevTools from 'app/common/containers/DevTools';
 
 const app = new App({
-  isStaticWeb: true,
   appStateSample: 'sample',
-  // DevTools,
   enableGoogleTagManager: true,
   googleTagManagerContainerId: 'GTM-5CRC6FJ',
   // enableGoogleAnalytics: true,

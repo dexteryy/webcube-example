@@ -1,12 +1,5 @@
-/* @flow */
 
 import React from 'react';
-
-type LogoProps = {
-  width?: number,
-  height?: number,
-  colors?: string,
-};
 
 function getColors(theme = 'red') {
   const colors = {
@@ -30,7 +23,7 @@ function FlipboardLogo({
   width = 60,
   height = 60,
   colors,
-}: LogoProps) {
+}) {
   const col = getColors(colors);
   return (
     <svg

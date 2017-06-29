@@ -1,23 +1,15 @@
-/* @flow */
 
 import React from 'react';
 import cssModules from 'react-css-modules';
 import classnames from 'classnames';
 import styles from './index.scss';
 
-type WelcomeBoxProps = {
-  message: string,
-  bgColor?: string,
-  boxStyle?: string,
-  children: any,
-};
-
 function WelcomeBox({
   message,
   bgColor = '#eee',
   boxStyle = '',
   children,
-}: WelcomeBoxProps) {
+}) {
   const boxCustomStyles = {
     backgroundColor: bgColor,
   };

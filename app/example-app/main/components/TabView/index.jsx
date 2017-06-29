@@ -34,7 +34,7 @@ function TabView({
         </div>
       </div>
       <div styleName="menu">
-        {menu.map((item) =>
+        {menu.map((item) => (
           <MenuLink
             key={item.path}
             to={item.path}
@@ -45,7 +45,7 @@ function TabView({
             <i className={item.icon}></i>
             {item.text}
           </MenuLink>
-        )}
+        ))}
       </div>
       {children}
       <div styleName="footer">This is a demo</div>

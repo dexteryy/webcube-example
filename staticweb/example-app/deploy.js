@@ -5,6 +5,7 @@ import App from 'app/example-app';
 
 const app = new App({
   appStateSample: 'sample',
+  disableHashRouter: !/localhost/.test(window.location.hostname),
   enableGoogleTagManager: true,
   googleTagManagerContainerId: 'GTM-5CRC6FJ',
   // enableGoogleAnalytics: true,

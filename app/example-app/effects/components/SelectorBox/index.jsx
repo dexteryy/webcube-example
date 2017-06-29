@@ -48,11 +48,11 @@ function SelectorBox({
     <div styleName="box">
       <form styleName="form">
         <div styleName="readme">{readme}</div>
-        {selectorsWithRow.map((row, i) =>
+        {selectorsWithRow.map((row, i) => (
           <div
             key={i}
             styleName={fieldsInRow === 2 ? 'two-fields' : 'three-fields'}>
-            {row.map((selector) =>
+            {row.map((selector) => (
               <div styleName="field" key={selector.id}>
                 <select
                   styleName={selector.value
@@ -61,16 +61,16 @@ function SelectorBox({
                   value={selector.value}
                   onChange={selector.handleChange}>
                   <option value="">{selector.placeholder}</option>
-                  {selector.options.map((option) =>
+                  {selector.options.map((option) => (
                     <option
                       key={option.id}
                       value={option.value}>{option.label}</option>
-                  )}
+                  ))}
                 </select>
               </div>
-            )}
+            ))}
           </div>
-        )}
+        ))}
         <div styleName="actions">
           {submitBlock}
         </div>

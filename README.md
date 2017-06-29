@@ -129,6 +129,38 @@ export CHROMEDRIVER_CDNURL="http://npm.taobao.org/mirrors/chromedriver"
 
 Follow [webcube's document](https://github.com/dexteryy/webcube#how-to-build-the-web-app) to install / build / test / deploy / ...
 
+## Example App
+
+* Use [Webpack Dev Server](https://www.npmjs.com/package/webpack-dev-server)
+
+  ```bash
+  npm run dev
+  ```
+
+  Open in the browser
+
+  ```bash
+  open 'http://localhost:8080/example-app/#/pane/effects'
+  ```
+
+* Use [Superstatic](https://www.npmjs.com/package/superstatic)
+
+  ```bash
+  npm run build
+  ```
+
+  Open in the browser
+
+  ```bash
+  open 'http://127.0.0.1:8080/pane/effects'
+  ```
+
+  or
+
+  ```bash
+  open 'http://localhost:8080/example-app/#/pane/effects'
+  ```
+
 ## Other Conventions
 
 #### Code Style

@@ -20,7 +20,6 @@
     "test:cloud": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
     "build": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build",
     "build:quick": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build:html",
-    "build:production": "npm run stop:staticserver; npm run deploy:staticserver && npm run start:staticserver",
     "new": "./node_modules/plop/src/plop.js --plopfile=node_modules/webcube/configs/plopfile.babel.js",
     "dev": "npm run stop:staticserver && node node_modules/webcube/tools/devServer.js",
     "dev:dashboard": "npm run stop:staticserver && ./node_modules/webpack-dashboard/bin/webpack-dashboard.js -- node node_modules/webcube/tools/devServer.js",
@@ -29,7 +28,7 @@
     "staticserver": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js start:staticserver",
     "start:staticserver": "nohup npm run staticserver > ./webserver.log 2>&1 &",
     "stop:staticserver": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js stop:staticserver",
-    "deploy:staticserver": "DEPLOY_MODE=staticserver NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
+    "deploy:staticserver": "npm run deploy:staticweb && docker build ./ --tag registry.cn-hangzhou.aliyuncs.com/acs/agent:production && docker push registry.cn-hangzhou.aliyuncs.com/acs/agent",
     "deploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
     "deploy:staticweb:html": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:html",
     "deploy:staticweb:assets": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:static",
@@ -51,7 +50,7 @@
     "normalize.css": "^6.0.0",
     "purecss": "^0.6.2",
     "semantic-ui-css": "^2.2.10",
-    "webcube": "^0.9.3"
+    "webcube": "^0.10.0"
   },
   "devDependencies": {},
   "keywords": [

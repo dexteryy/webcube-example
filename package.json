@@ -14,12 +14,12 @@
   "scripts": {
     "precommit": "npm run lint",
     "lint": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js check:all",
-    "test": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:all",
+    "test": "npm run test:quick && npm run test:unit",
     "test:quick": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
     "test:unit": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:unit",
     "test:cloud": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js test:functional",
-    "build": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build",
-    "build:quick": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build:html",
+    "build": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build:staticweb",
+    "build:html": "npm run start:staticserver && ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js build:html",
     "new": "./node_modules/plop/src/plop.js --plopfile=node_modules/webcube/configs/plopfile.babel.js",
     "dev": "npm run stop:staticserver && node node_modules/webcube/tools/devServer.js",
     "dev:dashboard": "npm run stop:staticserver && ./node_modules/webpack-dashboard/bin/webpack-dashboard.js -- node node_modules/webcube/tools/devServer.js",
@@ -28,13 +28,14 @@
     "staticserver": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js start:staticserver",
     "start:staticserver": "nohup npm run staticserver > ./webserver.log 2>&1 &",
     "stop:staticserver": "./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js stop:staticserver",
-    "deploy:staticserver": "npm run deploy:staticweb && docker build ./ --tag registry.cn-hangzhou.aliyuncs.com/acs/agent:production && docker push registry.cn-hangzhou.aliyuncs.com/acs/agent",
-    "deploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
-    "deploy:staticweb:html": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:html",
-    "deploy:staticweb:assets": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:static",
-    "deploy:staging:staticweb": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb",
-    "deploy:staging:staticweb:html": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:html",
-    "deploy:staging:staticweb:assets": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:static"
+    "deploy:staticserver": "npm run deploy:staticweb && npm run deploy:staticserver:push",
+    "deploy:staticserver:push": "docker build ./ --tag registry.cn-hangzhou.aliyuncs.com/flipboard-docker-hub/flipboard-web:production && docker push registry.cn-hangzhou.aliyuncs.com/flipboard-docker-hub/flipboard-web",
+    "deploy:staticweb": "DEPLOY_MODE=staticweb NODE_ENV=production npm run build && npm run upload:staticweb:assets && npm run upload:staticweb:html",
+    "upload:staticweb:html": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb:html",
+    "upload:staticweb:assets": "DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb:assets",
+    "deploy:staging:staticweb": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production npm run build && npm run upload:staging:staticweb:assets && npm run upload:staging:staticweb:html",
+    "upload:staging:staticweb:html": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb:html",
+    "upload:staging:staticweb:assets": "DEPLOY_ENV=staging DEPLOY_MODE=staticweb NODE_ENV=production ./node_modules/gulp/bin/gulp.js --gulpfile node_modules/webcube/configs/gulpfile.babel.js deploy:staticweb:assets"
   },
   "config": {
     "commitizen": {
@@ -50,7 +51,7 @@
     "normalize.css": "^6.0.0",
     "purecss": "^0.6.2",
     "semantic-ui-css": "^2.2.10",
-    "webcube": "^0.10.0"
+    "webcube": "^0.11.0"
   },
   "devDependencies": {},
   "keywords": [

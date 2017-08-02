@@ -51,6 +51,49 @@ export default class App extends PureComponent {
       title: 'Job Pane (TODO)',
       icon: styles['icon-news'],
     }];
+    // @TODO react-router v4: start
+    // return (
+    //   <TabView
+    //     id="exampleAppRoot"
+    //     Logo={FlipboardLogo}
+    //     logoWidth={60}
+    //     logoHeight={60}
+    //     title1="EXAMPLE APP"
+    //     title2="This is a demo"
+    //     MenuLink={NavLink}
+    //     menu={menu}>
+    //     <Switch>
+    //       <Route
+    //         path="/"
+    //         exact
+    //         render={() => (
+    //           <Redirect to="/pane/effects" />
+    //         )} />
+    //       <Route
+    //         path="/pane/effects"
+    //         render={() => (
+    //           <EffectPane
+    //             appStateSample={appStateSample} />
+    //         )} />
+    //       <Route
+    //         path="/pane/jobs"
+    //         render={() => (
+    //           <JobPane
+    //             appStateSample={appStateSample} />
+    //         )} />
+    //       <Route
+    //         path="/pane"
+    //         render={() => (
+    //           <ErrorPane
+    //             appStateSample={appStateSample} />
+    //         )} />
+    //     </Switch>
+    //     {React.cloneElement(children, {
+    //       appStateSample,
+    //     })}
+    //   </TabView>
+    // );
+    // @TODO react-router v4: end
     return (
       <TabView
         id="exampleAppRoot"
@@ -59,43 +102,11 @@ export default class App extends PureComponent {
         logoHeight={60}
         title1="EXAMPLE APP"
         title2="This is a demo"
-        // @TODO react-router v4: start
-        // MenuLink={NavLink}
         MenuLink={Link}
-        // @TODO react-router v4: end
         menu={menu}>
-        {/* @TODO react-router v4: start */}
-        {/* <Switch>
-          <Route
-            path="/"
-            exact
-            render={() => (
-              <Redirect to="/pane/effects" />
-            )} />
-          <Route
-            path="/pane/effects"
-            render={() => (
-              <EffectPane
-                appStateSample={appStateSample} />
-            )} />
-          <Route
-            path="/pane/jobs"
-            render={() => (
-              <JobPane
-                appStateSample={appStateSample} />
-            )} />
-          <Route
-            path="/pane"
-            render={() => (
-              <ErrorPane
-                appStateSample={appStateSample} />
-            )} />
-        </Switch> */}
-        {/* https://github.com/reactjs/react-router/issues/1857 */}
         {React.cloneElement(children, {
           appStateSample,
         })}
-        {/* @TODO react-router v4: end */}
       </TabView>
     );
   }

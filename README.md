@@ -1,3 +1,3 @@
-# webcube-example
 
-Migrated to [Project WebCube's monorepo](https://github.com/dexteryy/Project-WebCube/tree/master/webcube-example-for-monorepo)
+
+# This project has been moved into [the WebCube Project mono-repo](https://github.com/dexteryy/Project-WebCube/tree/master/examples/webcube-initial-structure)
